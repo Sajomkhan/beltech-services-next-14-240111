@@ -1,28 +1,28 @@
 import Image from "next/image";
 import React from "react";
 
-export const Hero = () => {
+const Hero = () => {
   return (
     <section className="relative">
       {/* ==============Hero Background============ */}
       {/* for destop */}
       <Image
-        className="hidden md:block w-full h-[520px] md:h-[540px] absolute -z-20 object-cover object-center"
-        src="/image/hero.png"
+        className="hidden md:block w-full h-[530px] md:h-[540px] absolute -z-20 object-cover object-center"
+        src="/assets/hero.png"
         width={1200}
         height={800}
         alt="Hero Image"
       />
       {/* for phone */}
       <Image
-        className="block md:hidden w-full h-[520px] md:h-[540px] absolute -z-20 object-cover object-center"
-        src="/image/hero.png"
+        className="block md:hidden w-full h-[530px] md:h-[540px] absolute -z-20 object-cover object-center"
+        src="/assets/hero.png"
         width={800}
         height={650}
         alt="Hero Image"
       />
       {/* Background Overlay */}
-      <div className="w-full h-[520px] md:h-[540px] absolute -z-10 bg-primary-50/80" />
+      <div className="w-full h-[530px] md:h-[540px] absolute -z-10 bg-primary-50/80" />
       {/* ================= Hero Forground================= */}
       <div className="device pt-3">
         <div className="flex-1 max-w-full h-[540px] device_center">
@@ -30,7 +30,7 @@ export const Hero = () => {
             <span className="text-primary text-lg mr-2">&hearts;</span>Your
             satisfaction is our power!
           </div>
-          <h1>We care about your softer, machine and instrument</h1>
+          <h1>We care about your softer, machine and automation</h1>
           <a
             href="/"
             className="uppercase btn_primary rounded-full shadow-lg px-6 py-3"
@@ -52,3 +52,5 @@ export const Hero = () => {
     </section>
   );
 };
+
+export default Hero;

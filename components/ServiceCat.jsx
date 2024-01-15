@@ -1,9 +1,8 @@
 import { serviceItems } from "@/data/dami_data";
-import { MemoryStick } from "lucide-react";
 
-const Services = () => {
+const ServiceCat = () => {
   return (
-    <section className="wrapper mx-auto py-12 mb-40">
+    <section className="wrapper mx-auto md:pb-16 pb-[650px] pt-8 px-4">
       <div className="relative w-full bg-primary device md:items-start pb-[145px] px-7 md:px-16 pt-7 md:pt-16 rounded-xl ">
         <h2 className="md:flex-1 capitalize text-white font-semibold">
           Our Best Services For Your Solution
@@ -14,7 +13,7 @@ const Services = () => {
           Industrial Machine Electrical Services. Embrace the future with
           cutting-edge Industrial Automation Solutions.
         </p>
-        <div className="absolute z-10 bottom-[-100px] left-0 w-full h-300 device px-7 md:px-16">
+        <div className="absolute z-10 top-[320px] md:bottom-[-100px] left-0 w-full h-300 device px-7 md:px-16">
           {serviceItems.map((services, index) => (
             <div
               key={index}
@@ -31,4 +30,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default ServiceCat;

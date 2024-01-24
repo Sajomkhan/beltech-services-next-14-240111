@@ -2,22 +2,28 @@ import { serviceItems } from "@/data/dami_data";
 
 const ServiceCat = () => {
   return (
-    <section className="wrapper mx-auto md:pb-16 pb-[650px] pt-8 px-4">
-      <div className="relative w-full bg-primary device md:items-start pb-[145px] px-7 md:px-16 pt-7 md:pt-16 rounded-xl ">
-        <h2 className="md:flex-1 capitalize text-white font-semibold">
+    <section className="wrapper pt-10 px-4">
+      {/* Text div */}
+      <div className="w-full bg-primary device md:items-start pb-[120px] px-7 md:px-16 pt-10 md:pt-16 rounded-xl ">
+        <h2 className="md:flex-1 capitalize text-center md:text-start text-white font-semibold">
           Our Best Services For Your Solution
         </h2>
-        <p className="md:flex-1 text-white ">
+        <p className="md:flex-1 text-white text-justify">
           Empower your digital presence with our Web and App Development.
           Elevate efficiency and safety through Electrical Controlling System &
           Industrial Machine Electrical Services. Embrace the future with
           cutting-edge Industrial Automation Solutions.
         </p>
-        <div className="absolute z-10 top-[320px] md:bottom-[-100px] left-0 w-full h-300 device px-7 md:px-16">
+      </div>
+      {/* Relative div */}
+      <div className="relative w-full h-[880px] md:h-[400px] xl:h-[150px]">
+        {/* Absolute div */}
+        <div className="absolute z-10 -top-[77px] w-full flex flex-wrap flex-col sm:flex-row gap-[26px] justify-center items-center px-7 md:px-16">
           {serviceItems.map((services, index) => (
+            // Clildren of absolute card div
             <div
               key={index}
-              className="flex flex-col items-center gap-2 bg-slate-100/80 p-5 rounded-lg text-center shadow-md"
+              className="flex flex-col gap-4 w-64 items-center bg-slate-100/80 p-5 sm:px-3 rounded-lg text-center shadow-md"
             >
               {services.icon}
               <p className="text-[18px] font-semibold">{services.title}</p>

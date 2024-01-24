@@ -2,7 +2,7 @@ import { serviceItems } from "@/data/dami_data";
 
 const ServiceDetails = () => {
   return (
-    <section className="wrapper px-4 md:px-40 py-20">
+    <section className="wrapper px-4 md:px-40">
       <h3 className="mb-8 underline px-2 text-center md:text-start font-bold">
         Check Our Services:
       </h3>
@@ -29,7 +29,7 @@ const ServiceDetails = () => {
               </svg>
             </summary>
 
-            <p className="mt-4 px-4 leading-relaxed text-gray-700 text-justify">
+            <p className="mt-4 px-4 leading-relaxed text-gray-700 text-justify whitespace-pre-wrap">
               {services.desc}
             </p>
           </details>

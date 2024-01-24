@@ -53,72 +53,84 @@ const Contact = () => {
   };
 
   return (
-    <section id="Contact" className="wrapper w-full px-4">
-      <h1 className="text-3xl font-bold text-center lg:mb-12">Contact Us</h1>
-      <div className="flex flex-col items-center justify-center lg:flex-row gap-4 md:gap-16">
-        {/* -------------Image Div----------------- */}
-        <div className="h-full object-cover">
-          <Image
-            className=""
-            src="/assets/contact.png"
-            width={500}
-            height={500}
-            alt="Image"
-          />
+    <section id="Contact" className=" bg-primary-50 py-10">
+      <div className="wrapper w-full px-4">
+        <h1 className="text-3xl font-bold text-center ">
+          Contact Us
+        </h1>
+        <div className="text-center md:text-start my-8 pl-0 md:pl-36">
+          <p className="underline font-semibold">Address:</p>
+          <p>Kawnia Main Street, Barisal Sadar,</p>
+          <p>Barisal, Bangladesh</p>
+          <p>Email: sajomkhan@gmail.com</p>
+          <p>Mobile: 01911977375</p>
         </div>
+        <div className="flex flex-col items-center justify-center lg:flex-row gap-4 md:gap-16">
+          {/* -------------Image Div----------------- */}
+          <div className="h-full object-cover">
+            <Image
+              className=""
+              src="/assets/contact.png"
+              width={500}
+              height={500}
+              alt="Image"
+            />
+          </div>
 
-        {/* ------------Message Form---------------- */}
-        <div className="max-w-[500px] flex flex-col gap-7 text-sm lg:text-base px-2">
-          <h1 className="text-lg primary_text font-bold">Have you any message? Get in touch...</h1>
-          <p>
-            My inbox is always open. Whether you have a any message or question
-            just say hello or write message. I will try my best to get back to
-            you!
-          </p>
-          {/* -------------------Input Form------------------------- */}
-          <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-6">
-            <input
-              type="text"
-              name="from_name"
-              value={inputValues.from_name}
-              onChange={handleInputChange}
-              placeholder="Your Name"
-              className="outline-none shadow-md rounded-lg py-3 px-4"
-              required
-            />
-            <input
-              type="email"
-              name="from_email"
-              value={inputValues.from_email}
-              onChange={handleInputChange}
-              placeholder="Your Email"
-              className="outline-none shadow-md rounded-lg py-3 px-4"
-              required
-            />
-            <textarea
-              rows={6}
-              name="message"
-              value={inputValues.message}
-              onChange={handleInputChange}
-              placeholder="Write message"
-              className="outline-none shadow-md rounded-lg py-3 px-4"
-              required
-            />
-            {/* -------------------Submit Button-------------------- */}
-            <button
-              disabled={loading}
-              className="btn_primary w-fit disabled:cursor-not-allowed mt-3"
+          {/* ------------Message Form---------------- */}
+          <div className="max-w-[500px] flex flex-col gap-7 text-sm lg:text-base px-2">
+            <h1 className="text-lg primary_text ">
+              Do you have any messages? Feel free to get in touch!
+            </h1>
+            {/* -------------------Input Form------------------------- */}
+            <form
+              ref={form}
+              onSubmit={sendEmail}
+              className="flex flex-col gap-6"
             >
-              {loading ? (
-                <span className="flex items-center gap-2">
-                  Wait <Loader color="#f5d45c" className="animate-spin" />
-                </span>
-              ) : (
-                "Send Message 👋"
-              )}
-            </button>
-            <ToastContainer />
-          </form>
+              <input
+                type="text"
+                name="from_name"
+                value={inputValues.from_name}
+                onChange={handleInputChange}
+                placeholder="Your Name"
+                className="outline-none shadow-md rounded-lg py-3 px-4"
+                required
+              />
+              <input
+                type="email"
+                name="from_email"
+                value={inputValues.from_email}
+                onChange={handleInputChange}
+                placeholder="Your Email"
+                className="outline-none shadow-md rounded-lg py-3 px-4"
+                required
+              />
+              <textarea
+                rows={6}
+                name="message"
+                value={inputValues.message}
+                onChange={handleInputChange}
+                placeholder="Write message"
+                className="outline-none shadow-md rounded-lg py-3 px-4"
+                required
+              />
+              {/* -------------------Submit Button-------------------- */}
+              <button
+                disabled={loading}
+                className="btn_primary w-fit disabled:cursor-not-allowed mt-3"
+              >
+                {loading ? (
+                  <span className="flex items-center gap-2">
+                    Wait <Loader color="#f5d45c" className="animate-spin" />
+                  </span>
+                ) : (
+                  "Send Message 👋"
+                )}
+              </button>
+              <ToastContainer />
+            </form>
+          </div>
         </div>
       </div>
     </section>

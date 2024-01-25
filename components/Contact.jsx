@@ -53,19 +53,18 @@ const Contact = () => {
   };
 
   return (
-    <section id="Contact" className=" bg-primary-50 py-10">
+    <section id="Contact">
       <div className="wrapper w-full px-4">
-        <h1 className="text-3xl font-bold text-center ">
-          Contact Us
-        </h1>
+        <h1 className="text-3xl font-bold text-center ">Contact Us</h1>
         <div className="text-center md:text-start my-8 pl-0 md:pl-36">
           <p className="underline font-semibold">Address:</p>
+          {/* ----------------Address---------------- */}
           <p>Kawnia Main Street, Barisal Sadar,</p>
           <p>Barisal, Bangladesh</p>
           <p>Email: sajomkhan@gmail.com</p>
           <p>Mobile: 01911977375</p>
         </div>
-        <div className="flex flex-col items-center justify-center lg:flex-row gap-4 md:gap-16">
+        <div className="flex flex-col items-center justify-center lg:flex-row gap-12 md:gap-16">
           {/* -------------Image Div----------------- */}
           <div className="h-full object-cover">
             <Image
@@ -79,9 +78,9 @@ const Contact = () => {
 
           {/* ------------Message Form---------------- */}
           <div className="max-w-[500px] flex flex-col gap-7 text-sm lg:text-base px-2">
-            <h1 className="text-lg primary_text ">
+            <p className="text-lg primary_text ">
               Do you have any messages? Feel free to get in touch!
-            </h1>
+            </p>
             {/* -------------------Input Form------------------------- */}
             <form
               ref={form}
